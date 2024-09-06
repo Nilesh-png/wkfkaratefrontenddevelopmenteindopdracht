@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.wkf.net/ link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/wkffedsshome.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/wkffedssolymp.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,6 +57,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+WAT NIET WAS AANGEVINKT IN DE CHECKLIST
+  - De screenreader beschrijft de pagina niet goed genoeg, waardoor de gebruiker niet heel goed weet waar in de pagina die zich bevindt en/of welke informatie erbij wordt verteld.
+  - Geen alt text voor de foto's en video's. Je hoort alleen "foto, foto" of "video, video"
+  - de video's zijn niet afspeelbaar. Je ziet alleen een zwart scherm met een kruisje om de "video" weg te klikken.
+  - De website heeft veel div elementen, waardoor je tags zoals <!--<button> en <h1>--> helemaal niet ziet. Daardoor ontbreken er zoveel tags
+  - Er zijn onzichtbare elementen die gefocust kunnen worden met de tab toets.
+  - De lay-out is redelijk simpel, maar omdat er zoveel elementen staan, is het toch nog een kleine chaos.
+  - Je kan horizontaal scrollen in deze site, maar alleen voor specifieke content dat op een rijtje staat.
+
+WAT WEL WAS AANGEVINKT IN DE CHECKLIST
+  - De taal is straightforward, wat het makkelijker maakt om het te lezen.
+  - Als de elementen die zichtbaar zijn in de focus state zijn, is het wel goed te zien dat ze in die state staan.
+  - De video's spelen niet automatisch af.
+  - Je kan je telefoon draaien en de content nog steeds goed lezen.
+  - De contrast ziet er prima uit.
 
 </details>
 
