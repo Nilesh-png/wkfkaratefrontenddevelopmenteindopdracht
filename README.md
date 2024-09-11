@@ -19,10 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nilesh Rampartaap (vervangen door jouw naam)
 
   #### Je startniveau:
-  rood (kies uit zwart, rood óf blauw)
+  blauw (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  responsive (kies uit responsive óf surface plane)
+  surface plane (kies uit responsive óf surface plane)
  
 </details>
 
@@ -66,7 +66,7 @@ WAT NIET WAS AANGEVINKT IN DE CHECKLIST
   - Er zijn onzichtbare elementen die gefocust kunnen worden met de tab toets.
   - De lay-out is redelijk simpel, maar omdat er zoveel elementen staan, is het toch nog een kleine chaos.
   - Je kan horizontaal scrollen in deze site, maar alleen voor specifieke content dat op een rijtje staat.
-
+  
 WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   - De taal is straightforward, wat het makkelijker maakt om het te lezen.
   - Als de elementen die zichtbaar zijn in de focus state zijn, is het wel goed te zien dat ze in die state staan.
@@ -84,13 +84,13 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/wkffedsshome.jpg" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  ### dynamisch deel (bijv menu): nieuws stuk
+  <img src="readme-images/dynamischdeel.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### wellicht nog een dynamisch deel (bijv filter): hamburgermenu
+  <img src="readme-images/wkffedsshome.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
