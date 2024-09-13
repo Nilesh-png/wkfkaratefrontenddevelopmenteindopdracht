@@ -16,13 +16,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Nilesh Rampartaap (vervangen door jouw naam)
-
+  Nilesh Rampartaap
   #### Je startniveau:
-  blauw (kies uit zwart, rood óf blauw)
+  blauw 
 
   #### Je focus:
-  surface plane (kies uit responsive óf surface plane)
+  surface plane 
  
 </details>
 
