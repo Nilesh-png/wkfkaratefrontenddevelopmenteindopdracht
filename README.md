@@ -83,13 +83,13 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/wkffedsshome.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): nieuws stuk
   <img src="readme-images/dynamischdeel.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): hamburgermenu
-  <img src="readme-images/wkffedsshome.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/dynamischdeel2.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -119,10 +119,9 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - sommige buttons moesten a href zijn
+  - het nieuws stukje is een section in zijn geheel, in het scroll gedeelte zit er een section en alle kleine blokjes zijn ook sections
+  - voor een stukje van mijn website werden eerder sections aangeraden dan de details tag
 
 </details>
 
@@ -148,6 +147,11 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  VRAGEN
+  - Moet alles werken van de eventsections, of alleen om een keertje te laten zien? bijv. dat 1 knopje wel werkt en de rest niet, omdat het toch hetzelfde doet
+  - Gebruiken van < en > als buttons lukt niet. Is daar een oplossing voor?
+  - Moet alles er exact hetzelfde uitzien, of mag het een beetje afwijken? Ookal is dit niet perse iets wat bij ik over de surface plane over nagedacht heb.
+  - Als er nog tijd over is: hamburgermenu?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
