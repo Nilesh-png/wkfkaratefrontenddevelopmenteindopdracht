@@ -151,6 +151,7 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   - Moet alles werken van de eventsections, of alleen om een keertje te laten zien? bijv. dat 1 knopje wel werkt en de rest niet, omdat het toch hetzelfde doet
   - Gebruiken van < en > als buttons lukt niet. Is daar een oplossing voor?
   - Moet alles er exact hetzelfde uitzien, of mag het een beetje afwijken? Ookal is dit niet perse iets wat bij ik over de surface plane over nagedacht heb.
+  - de meeste elementen zijn niet te vinden op google, is het goed als ik images gebruik
   - Als er nog tijd over is: hamburgermenu?
 
   ### Verslag van meeting
@@ -160,6 +161,10 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   - punt 2
   - nog een punt
 - ...
+
+- hamburgermenu en dark mode is surface plane
+- niet alles hoeft te werken, maar wel ong drie sections om te laten zien dat je het kan
+- 
 
 </details>
 
