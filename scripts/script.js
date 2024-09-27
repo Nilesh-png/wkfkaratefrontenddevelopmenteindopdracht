@@ -4,25 +4,55 @@ console.log("hi");
 /* TRIANGLE */
 
 
-document.querySelectorAll('button[data-index]').forEach(button => {
+const buttons = document.querySelectorAll('#eventselector button');  /*bron 5 ChatGPT: Can you help me with making all of the triangles invisible and making them visible when I am clicking the right button. The triangle needs to be visisble under the button that has been clicked https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010 */
+
+// Get all sections and the buttons
+// Select all direct child div elements inside the .eventsections container
+const sections = document.querySelectorAll('.eventsections > div');
+const prevBtn = document.querySelector(' .eventsections > button:first-of-type');
+const nextBtn = document.querySelector(' .eventsections > button:last-of-type');
+
+let currentIndex = 0; // Start at the first section
+
+
+if (buttons.length > 0) { /*bron 9 ChatGPT: I want that the first button is active by default */
+  buttons[0].parentElement.classList.add('active');
+}
+
+buttons.forEach((button) => {
   button.addEventListener('click', function() {
-    const container = this.parentElement;  // Scrollbare container
-    const indicator = document.getElementById('triangleindicator');  // De indicator
-    
-    // Verwijder de 'active' class van alle knoppen
-    document.querySelectorAll('button[data-index]').forEach(btn => btn.classList.remove('active'));
-    this.classList.add('active');
-    
-    // Haal de positie van de knop binnen de container op
-    const buttonLeftPosition = this.offsetLeft;  // Positie van de knop t.o.v. de container
-    const containerScroll = container.scrollLeft;  // Hoe ver is de container gescrold?
-    const buttonWidth = this.offsetWidth;  // Breedte van de knop
-    const indicatorWidth = indicator.offsetWidth;  // Breedte van de indicator
+    // Remove the 'active' class from all list items
+    document.querySelectorAll('#eventselector li').forEach((li) => {
+      li.classList.remove('active');
+    });
 
-    // Bereken de nieuwe positie van de indicator, inclusief de scrollpositie van de container
-    const leftPosition = buttonLeftPosition - containerScroll + (buttonWidth / 2) - (indicatorWidth / 2);
-
-    // Update de indicator-positie binnen de container
-    indicator.style.left = `${leftPosition}px`;
+    // Add the 'active' class to the parent <li> of the clicked button
+    this.parentElement.classList.add('active');
   });
 });
+
+// Function to update visible section
+function showSection(index) {
+    // Hide all sections
+    sections.forEach(section => section.style.display = 'none');
+    
+    // Show the section based on index
+    sections[index].style.display = 'block';
+}
+
+// Initialize by showing the first section
+showSection(currentIndex);
+
+// Add event listeners to the buttons
+prevBtn.addEventListener('click', () => {
+    // Go to previous section, if at 0 go to the last section
+    currentIndex = (currentIndex === 0) ? sections.length - 1 : currentIndex - 1;
+    showSection(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    // Go to next section, if at the last section go back to the first
+    currentIndex = (currentIndex === sections.length - 1) ? 0 : currentIndex + 1;
+    showSection(currentIndex);
+});
+

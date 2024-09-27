@@ -253,8 +253,13 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. [bron 1](https://chatgpt.com/share/66f66e77-4924-800f-a1fe-e7400bd58418)
+  2. [bron 2](https://stackoverflow.com/questions/11184117/transparent-css-background-color)
+  3. [bron 3](https://chatgpt.com/share/66f66f67-682c-800f-b3c9-5f4fb6f71a80)
+  4. [bron 4](https://chatgpt.com/share/66f66fb9-d664-800f-838f-6bc8be314e93)
+  5. [bron 5](https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010)
+  6. [bron 6](https://chatgpt.com/share/66f67338-66e0-800f-a70b-3bf328c38d2b)
+  7. [bron 7](https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253)
+  8. [bron 8](https://chatgpt.com/share/66f6757d-1584-800f-b514-2439e9151a56)
 
 </details>

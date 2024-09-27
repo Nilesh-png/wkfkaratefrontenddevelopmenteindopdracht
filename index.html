@@ -15,7 +15,7 @@
 
 <body>
 	<header>
-		<section>
+		<div>
 			<!--SOCIAL MEDIA INCONEN-->
 			<img src="images/wkf.netlogo.png" alt="wkf.netlogo">
 			<a href="https://www.facebook.com/wkfofficial/?ref=hl"><img src="images/facebook.png" alt="facebook"></a>
@@ -24,17 +24,35 @@
 			<a href="https://www.tiktok.com/@worldkaratefederation"><img src="images/tiktok.png" alt="tiktok"></a>
 			<a href="https://www.youtube.com/user/WKFKarateWorldChamps"><img src="images/youtube.png" alt="youtube"></a>
 			<a href="https://weibo.com/u/5128747069"><img src="images/weibo.png" alt="weibo"></a>
-		</section>
+		</div>
+
+		<div class="ofscreenmenu">
+			<a href="">Olympics</a>
+			<a href="">World Championships</a>
+			<a href="">Karate 1</a>
+			<a href="">continental Championships</a>
+			<a href="">Multisport Events</a>
+			<a href="">Other Events</a>
+			<a href="">Homologated Items</a>
+			<a href="">Structure</a>
+			<a href="">Sport</a>
+			<a href="">Ranking</a>
+			<a href="">Solidarity Programmes</a>
+			<a href="">Anti-Doping</a>
+			<a href="">Para-Karate</a>
+			<a href="">Guardian Girls</a>
+		</div>
 
 		<nav>
 			<!--NAVIGATIE-->
 			<img src="images/navigatie.png" alt="Ranking & ranking rules, calendar and a search icon">
 			<!--+hamburger menu-->
+			<div class="hamburgermenu"></div>
 		</nav>
 	</header>
 
 
-	<section id="bignews">
+	<div id="bignews">
 
 		<!--BIG NEWS-->
 		<section>
@@ -43,7 +61,7 @@
 		</section>
 
 		<!--NEWS SECTIONS (4)-->
-		<section id="newssections">
+		<div id="newssections">
 
 			<section>
 				<h2>news</h2>
@@ -65,43 +83,64 @@
 				<p>Highlights of finals of kata of #Karate1Paris</p>
 			</section>
 
-		</section>
+		</div>
 
-	</section>
+	</div>
 
 	<!--TWO CARDS-->
-	<section>
+	<div>
 		<img src="images/twocards.png" alt="one card about karate TV Platforms Events and the other card about WKF YouTube in Member Frederations">
-	</section>
+	</div>
 
 	<!--EVENTSECTIONS sections or |details tag| (liever sections)-->
 
-	<section>
-		<section id="eventselector">
-			<button data-index="0">world championships</button>
-			<button data-index="1">karate 1</button>
-			<button data-index="2">olympics</button>
-			<button data-index="3">continental championships</button>
-			<button data-index="4">multisport events</button>
-			<button data-index="5">other events</button>
-		</section>
-		<section>
-			<section id="triangleindicator"></section>
-		</section>
+	
+		<ul id="eventselector">
+			<li><button data-index="0">world championships</button></li>
+			<li><button data-index="1">karate 1</button></li>
+			<li><button data-index="2">olympics</button></li>
+			<li><button data-index="3">continental championships</button></li>
+			<li><button data-index="4">multisport events</button></li>
+			<li><button data-index="5">other events</button></li>
+		</ul>
 
 		<!--VERDERTERUG-->
 		<section class="eventsections">
-			<button>&lt;</button> <!--Hulp van studentassistent-->
-			<section>
-				<img src="images/wkflogo2.png" alt="second version of the WKF logo">
-				<h2>World Championships 2023 World Senior Championships</h2>
-				<button>26th World Championships, BUDAPEST October 24-29, 2023</button>
-				<button>GO TO ALL SENIOR WORLD CHAMPIONSHIPS</button>
-			</section>
-			<button>&gt;</button>
+				<button>&lt;</button> <!--Hulp van studentassistent-->
+
+				<!--FIRST SECTION: SENIOR-->
+				<div>
+				<img src="images/championshipssenior.png" alt="logo of the senior championships">
+				<div>
+					<h2>World Championships 2023 World Senior Championships</h2>
+					<button>26th World Championships, BUDAPEST October 24-29, 2023 <img src="images/arrowright.png" alt="arrowright"></button>
+					<button>go to all senior world championships</button>
+				</div>
+				</div>
+
+				<!--SECOND SECTION: JUNIOR-->
+				<div>
+					<img src="images/championshipsjunior.jpg" alt="logo of the junior championships">
+					<div>
+						<h2>World Championships 2024 World Championships Cadet, Junior & U21</h2>
+						<button>13th WKF Junior, Cadet & U21 Championships, Venice October 9-13 <img src="images/arrowright.png" alt="arrowright"></button>
+						<button>go to all events</button>
+					</div>
+					</div>
+
+				<!--THIRD SECTION: KARATE WORLD CUP-->
+				<div>
+					<img src="images/championshipsjunior.jpg" alt="logo of the junior championships">
+					<div>
+						<h2>World Championships Karate World Cup</h2>
+						<button>2024 Karate world cup november 22-24, 2024 <img src="images/arrowright.png" alt="arrowright"></button>
+						<button>go to all events</button>
+					</div>
+					</div>
+
+				<button>&gt;</button>
 		</section>
 		
-	</section>
 
 	<!--#KARATESPIRIT-->
 	<h2>#KarateSpirit</h2>
@@ -117,22 +156,22 @@
 	<!--#KARATELIFE VIDEOS-->
 	
 	<h2>#karatelife videos</h2>
-	<section>
+	<div>
 		<button>Back</button>
 		<iframe src="https://www.youtube.com/embed/g98W4x9OcbA?si=cU5BwUVCOVLuYycZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 		</iframe>
 		<button>Next</button>
-	</section>
+	</div>
 	<a href="">SEE ALL VIDEOS</a>
 
 	<!--#KARATELIFE PHOTOS-->
 
 	<h2>#karatelife photos</h2>
-	<section>
+	<div>
 	<button>Back</button>
 	<img src="https://www.wkf.net/imagenes/galeria/2022-karate-1-premier-league-fujairah/IG_karate1fujairah_01_05.jpg" alt="2022 Karate 1-Premier League Fujairah">
 	<button>Next</button>
-	</section>
+	</div>
 
 	<!--Footer-->
 	<footer>

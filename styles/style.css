@@ -2,201 +2,344 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-black:#111;
-	--color-white:#eee;
-	--color-gradientgray: rgba(100, 100, 100, 0.7);
-	--color-gray: rgb(100, 100, 100);
-	--color-brown: rgb(165, 42, 42);
-}
-
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	width: auto;
-	font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
-	max-width: 100%;
-}
-
-h2, button {
-	text-transform: uppercase;
-}
-
-/* SOCIAL MEDIA ICONEN */
-header section:first-of-type{
-	background-color: var(--color-black);
+	box-sizing:border-box;  
+  }
+  
+  
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+	  /* startje */
+	  --color-black:#111;
+	  --color-white:#eee;
+	  --color-gradientgray: rgba(100, 100, 100, 0.7);
+	  --color-gray: rgb(100, 100, 100);
+	  --color-brown: rgb(165, 42, 42);
+  }
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  
+  /* jouw code */
+  * {
+	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+	  font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+	  max-width: 100%;
+  }
+  
+  h2, button {
+	  text-transform: uppercase;
+  }
+  
+  /* SOCIAL MEDIA ICONEN */
+  header > div:first-of-type {
+	  background-color: var(--color-black);
+	  display: flex;
+	  justify-content: center;
+	  padding: .5rem 0em .5rem 0em;
+	  
+  }
+  
+  header > div:first-of-type img{
+	  height: 2.2em;
+	  border-radius: 2em;
+	  border: 0.1rem solid var(--color-black);
+	  margin-right: .5rem;	
+  }
+  
+  /* NAVIGATION */
+ .ofscreenmenu {
+	background-color: var(--color-white);
+	height: 100vh;
+	width: 100%;
+	max-width: 15em;
+	position: fixed;
+	top: 0;
+	right: -15em;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	padding: .5rem 0em .5rem 0em;
-}
+	align-items: center;
+	text-align: center;
+	font-size: 2em;
+	transition: 300ms ease;
+ } 
 
-header section:first-of-type img{
-	height: 2.2em;
-	border-radius: 2em;
-	border: 0.1rem solid var(--color-black);
-}
+ .ofscreenmenu.active {
+	right: 0;
+ }
+ 
+  nav {
+	  display: flex;
+	  padding: 1em;
+	  justify-content: end;
+  }
 
-header section:nth-child(2){
-	margin-right: 1.5em;
-}
-
-/* NAVIGATIE */
-nav {
-	display: flex;
-	justify-content: end;
-}
-
-/* BIG NEWS */
-#bignews section h2 {
-	font-stretch: condensed; /* ChatGPT belangrijkste prompt: ik heb geen condensed versie van de lettertype, alleen de normale */
-	font-weight: bolder;
-	font-size: 3em;
-}
-
-#bignews section h2, .bignews section p {
-	margin: 0em .5rem 0em .5rem;
-}
-
-#bignews {		/* ChatGPT prompts: hoe zou ik een afbeelding kunnen toevoegen als achtergrond in het BIG NEWS gedeelte? (html laten zien) en hoe kan ik de afbeelding iets meer naar links verschuiven? */
-	background-image: url("../images/news.jpg");
-	background-size: cover;
-	background-position: 80% center;
-	background-repeat: no-repeat;
-
-	padding: 2em 0em 2em 0em;
-	color: var(--color-white);
-}
-
-/* NEWS SECTIONS */
-#newssections {
-	display: flex;
-	align-items: end;
-	margin-top: 3em;
-	overflow-x: scroll;
-	gap: .01rem;
-}
-
-#newssections section {
-	background-image: url("../images/newssections.jpg");
-	background-size: cover;
-	background-position: 80% center;
-	background-repeat: no-repeat;
-
-	padding-top: 2em; /* Hulp van Ivo */
-	border-radius: 1.5em;
-	border: .1rem solid var(--color-white);
-	box-sizing: border-box;
-	margin: 0em 1em 0em 1em;
-}
-
-#newssections section h2, #newssections section p {
-	background: var(--color-gradientgray); /* https://stackoverflow.com/questions/11184117/transparent-css-background-color */
-	border-bottom-left-radius: 1.5em;  /* ChatGPT: hoe kan ik ervoor zorgen dat de border radius alleen aan de bovenkant aangepast wordt? */
-    border-bottom-right-radius: 1.5em; 
-
-	font-size: .9rem;
-	margin: 0 auto;
-}
-
-#newssections section h2 {
-	border-radius: 0;
-	padding: .5rem 0em 1em .5rem;
-	font-stretch: condensed;
-	font-weight: bolder;
-}
-
-#newssections section p {
-	padding: 0em .5rem .5rem .5rem;
-}
-
-/* TWO CARDS */
-
-/* EVENTSECTIONS */
-
-#eventselector {
-	display: flex;
-	overflow-x: scroll;
-	padding-bottom: 1.5em;
-	margin: 1em 1em 0em 1rem;
+  .hamburgermenu {
+	height: 1em;
+	width: 3em;
+	margin-left: auto;
 	position: relative;
-}
+	border-radius: .2rem;
+  }
 
-#eventselector button {
-	max-height: 3em;
-	margin: 0em .3rem 1em .3rem;
-	border-radius: .5rem;
-
-	background: none; /* ChatGPT: hoe kan ik een button geen stijl geven, waardoor het op normale tekst lijkt? */
-	border: none;
-	font: inherit;
-	font-weight: bolder;
-	font-stretch: extra-condensed;
-}
-
-#triangleindicator {
+  .hamburgermenu span {
+	height: .5rem;
+	width: 100%;
+	background-color: var(--color-brown);
+	border-radius: 2em;
 	position: absolute;
-	height: .3rem;
-	background-color: brown;
-	margin: 0em 1em 0em 1rem;
-	transition: left 0.3s ease;
-	width: 80%;
-	left: 5%;
-}
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s ease;
+  }
 
-#triangleindicator::after{
-	content: '';
-	position: absolute;
-	bottom: 8px; /* Positie van de driehoek onder de lijn */
-	left: 50%; /* Centraal ten opzichte van de indicator */
-	transform: translateX(-50%); /* Verplaats de driehoek naar het midden */
-	width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-bottom: 28px solid brown; /* Driehoekkleur */
-}
+  .hamburgermenu span:nth-child(1) {
+	top: 25%;
+  }
 
-.eventsections section {
-	margin: 2em;
-	border: .3rem solid var(--color-brown);
-	border-radius: 1em;
-	padding: 1em;
-}
+  .hamburgermenu span:nth-child(3) {
+	top: 75%;
+  }
+  
+  /* BIG NEWS */
+  #bignews section h2 {
+	  font-stretch: condensed; /* bron 1 ChatGPT belangrijkste prompt: ik heb geen condensed versie van de lettertype, alleen de normale https://chatgpt.com/share/66f66e77-4924-800f-a1fe-e7400bd58418 */
+	  font-weight: bolder;
+	  font-size: 3em;
+  }
+  
+  #bignews section h2, .bignews section p {
+	  margin: 0em .5rem 0em .5rem;
+  }
+  
+  #bignews {		/* bron 1 ChatGPT prompts: hoe zou ik een afbeelding kunnen toevoegen als achtergrond in het BIG NEWS gedeelte? (html laten zien) en hoe kan ik de afbeelding iets meer naar links verschuiven? https://chatgpt.com/share/66f66e77-4924-800f-a1fe-e7400bd58418*/
+	  background-image: url("../images/news.jpg");
+	  background-size: cover;
+	  background-position: 80% center;
+	  background-repeat: no-repeat;
+  
+	  padding: 2em 0em 2em 0em;
+	  color: var(--color-white);
+  }
+  
+  /* NEWS SECTIONS */
+  #newssections {
+	  display: flex;
+	  align-items: end;
+	  margin-top: 3em;
+	  overflow-x: scroll;
+	  gap: .01rem;
+  }
+  
+  #newssections section {
+	  background-image: url("../images/newssections.jpg");
+	  background-size: cover;
+	  background-position: 80% center;
+	  background-repeat: no-repeat;
+  
+	  padding-top: 2em; /* Hulp van Ivo */
+	  border-radius: 1.5em;
+	  border: .1rem solid var(--color-white);
+	  box-sizing: border-box;
+	  margin: 0em 1em 0em 1em;
+  }
+  
+  #newssections section h2, #newssections section p {
+	  background: var(--color-gradientgray); /* bron 2 https://stackoverflow.com/questions/11184117/transparent-css-background-color */
+	  border-bottom-left-radius: 1.5em;  /* bron 3 ChatGPT: hoe kan ik ervoor zorgen dat de border radius alleen aan de bovenkant aangepast wordt? (ik bedoelde eigenlijk alleen onderkant) https://chatgpt.com/share/66f66f67-682c-800f-b3c9-5f4fb6f71a80 */
+	  border-bottom-right-radius: 1.5em; 
+  
+	  font-size: .9rem;
+	  margin: 0 auto;
+  }
+  
+  #newssections section h2 {
+	  border-radius: 0;
+	  padding: .5rem 0em 1em .5rem;
+	  font-stretch: condensed;
+	  font-weight: bolder;
+  }
+  
+  #newssections section p {
+	  padding: 0em .5rem .5rem .5rem;
+  }
+  
+  /* TWO CARDS */
+  
+  /* EVENTSELECTOR */
+  
+  
+  #eventselector {
+	  display: grid;
+	  grid-auto-flow: column; /* bron 4 ChatGPT: hoe krijg ik een lijst met scrollbare buttons naast elkaar met grid? https://chatgpt.com/share/66f66fb9-d664-800f-838f-6bc8be314e93*/
+	  overflow-x: scroll;
+	  padding-bottom: 1.5em;
+	  margin: 1em 1em 0em 1rem;
+	  position: relative;
+  
+	  ::-webkit-scrollbar { /* bron 5 ChatGPT: If you do overflow-x: scroll, you have a rectangular indicator below the thing that is scrollable. How can I remove it? https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010*/
+		  display: none;
+	  }
+	  /* Optional: Ensure it scrolls even though scrollbar is hidden */
+	  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+	  scrollbar-width: none;     /* For Firefox */
+  }
+  
+  #eventselector button {
+	  max-height: 3em;
+	  margin: 0em .3rem 1em .3rem;
+	  border-radius: .5rem;
+  
+	  background: none; /* bron 6 ChatGPT: hoe kan ik een button geen stijl geven, waardoor het op normale tekst lijkt? https://chatgpt.com/share/66f67338-66e0-800f-a70b-3bf328c38d2b*/
+	  border: none;
+	  font: inherit;
+	  font-weight: bolder;
+	  font-stretch: extra-condensed;
+  }
+  #eventselector {
+	  border-bottom: 3px var(--color-brown) solid;
+	  padding: 0;
+	  list-style-type: none;
+  }
+  
+  #eventselector li  {
+	  position: relative;
+	  padding: 0;
+  }
+  
+   #eventselector li::before {  /* bron 5 studentassistent hielp mij met de scrollbar te fixen en ChatGPT: this is now a square but I want to make a triangle with this one https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010 */
+	  position: absolute;
+	  content: '';
+	  width: 0;
+	  height: 0;
+	  bottom: 0;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-bottom: 15px solid var(--color-brown);
+	  margin-bottom: -.5rem;
+	  visibility: hidden; /* bron 5 ChatGPT:Can you help me with making all of the triangles invisible and making them visible when I am clicking the right button. The triangle needs to be visisble under the button that has been clicked https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010 */
+	  transition: transform 0.3s ease, opacity 0.3s ease; /* bron 5 ChatGPT: what is a cool transition with this? https://chatgpt.com/share/66f67134-a870-800f-bf92-74196002f010 */
+	  opacity: 0;	/* ChatGPT: transition (lege opacity) */
+  }
+  
+  #eventselector li.active::before {
+	  visibility: visible;
+	  opacity: 1;          /* ChatGPT: transition (volledige opacity) */
+	  transform: translate(-50%, -50%) scale(1);  /* ChatGPT: transition (vergroten naar 1) */
+  }
+  
+  /* EVENTSECTIONS */
+  
+  .eventsections {
+	  padding: 0;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-evenly;
+	  margin: 2em 0em 8em 0em;
+  }
+  
+  .eventsections > button:first-of-type {
+	  margin-left: .5rem;
+  }
+  
+  .eventsections > button:last-of-type {
+	  margin-right: .5rem;
+  }
+  
+  .eventsections > button:first-of-type, .eventsections > button:last-of-type{ /* bron 7 ChatGPT: how do I select the very first and the very last button seperately? https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253 */
+	  color:  var(--color-gray);
+	  background-color:rgb(197, 193, 193);
+	  border: none;
+	  border-radius: 50%; /* Makes the button circular */
+	  width: 2em; /* Set a width */
+	  height: 2em; /* Set the same height as the width */
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  font-size: 1em;
+	  padding: 0;
+  }
+  
+  .eventsections h2 {
+	  margin: .5rem;
+  }
+  
+  .eventsections > div > img { /* Hulp van Mart */
+	  width: 100%;
+	  display: block;
+	  margin: 0 auto;
+	  border-top: none;
+	  border-top-left-radius: .5rem;
+	  border-top-right-radius: .5rem;
+	  border-bottom: 1.5em solid var(--color-brown);
+  }
+  
+  .eventsections > div {
+	  justify-content: space-between;
+	  max-width: 70%;
+	  display: none;
+  }
 
-.eventsections section h2 {
-	margin: .5rem;
-}
+  .eventsections > div.active {
+	display: block;
+  }
+  
+  .eventsections > div > div {
+	  border: .2rem solid var(--color-brown);
+	  border-bottom-left-radius: 1em;
+	  border-bottom-right-radius: 1em;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	  padding: 1em;
+	  margin-top: -1.5em;
+	  background-color: white; 
+	  flex-direction: column;
+  }
+  
+  .eventsections div > button:first-of-type {
+	  background: none;
+	  border: .1rem solid var(--color-gray);
+	  border-radius: 1em;
+	  margin: 1em;
+	  text-align: left;
+	  color: var(--color-gray);
+	  font-weight: bold;
+	  font-size: 1em;
+	  font-stretch: condensed;
+	  padding: 1em 0em 1em 1em;
+	  display: flex;
+  }
 
-.eventsections section button:first-of-type {
-	background: none;
-	border: .2rem solid brown;
-	margin-bottom: .3rem;
+  .eventsections button img[alt="arrowright"] { /*bron 8ChatGPT: how do I select the arrowright img in css? https://chatgpt.com/share/66f6757d-1584-800f-b514-2439e9151a56*/
+    max-width: 4em;
+	margin-top: 1em;  /* Align items werkt nu niet dus ik heb het even zo opgelost */
 }
-
-.eventsections section button:last-of-type{
-	background: brown;
-	border: .2rem solid brown;
-	color: var(--color-white);
-}
+  
+  .eventsections div > button:last-of-type {
+	  background: var(--color-brown);
+	  border: .2rem solid var(--color-brown);
+	  color: var(--color-white);
+	  margin: 1em;
+	  font-weight: bold;
+	  font-size: 1em;
+	  font-stretch: condensed;
+	  border-radius: 1em;
+	  margin: 1em;
+	  padding: 1em;
+  }
