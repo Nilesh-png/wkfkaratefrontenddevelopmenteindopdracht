@@ -208,11 +208,9 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+  - liever geen classes selecteren in javascript, omdat je dan meerdere elementen met dezelfde class selecteert (gebruik liever een ID)
+  - Sitemap gedeelte is onderdeel van een footer, maar wel 2 div'jes
+  - align-top voor de buttons en translaten
 </details>
 
 
@@ -261,5 +259,8 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   6. [bron 6](https://chatgpt.com/share/66f67338-66e0-800f-a70b-3bf328c38d2b)
   7. [bron 7](https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253)
   8. [bron 8](https://chatgpt.com/share/66f6757d-1584-800f-b514-2439e9151a56)
+  9. [bron 9](https://chatgpt.com/share/66f923bf-df2c-800f-8b0b-6432844099fc)
+  10.[bron 10](https://chatgpt.com/share/66f958d5-0450-800f-8039-4608be54c88d)
+  11.[bron 11](https://youtu.be/aNDqzlAKmZc?si=nSyuT3wzvqFc4d3c)
 
 </details>

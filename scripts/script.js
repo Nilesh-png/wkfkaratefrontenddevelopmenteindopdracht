@@ -56,3 +56,24 @@ nextBtn.addEventListener('click', () => {
     showSection(currentIndex);
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerIcon = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  // Function to toggle the menu open/close
+  function toggleMenu() {
+      if (menu.classList.contains('active')) {
+          menu.classList.remove('active'); // Close the menu
+          hamburgerIcon.src = 'images/hamburgermenu.png'; // Set icon to burger
+      } else {
+          menu.classList.add('active'); // Open the menu
+          hamburgerIcon.src = 'images/hamburgercross.png'; // Set icon to cross
+      }
+  }
+
+  // Add event listener to hamburger icon to toggle menu
+  hamburgerIcon.addEventListener('click', toggleMenu);
+});
+
+

@@ -15,11 +15,13 @@
   /*********************/
   :root {
 	  /* startje */
-	  --color-black:#111;
-	  --color-white:#eee;
+	  --color-black:#000000;
+	  --color-white:#ffffff;
 	  --color-gradientgray: rgba(100, 100, 100, 0.7);
 	  --color-gray: rgb(100, 100, 100);
 	  --color-brown: rgb(165, 42, 42);
+	  --color-button:rgb(197, 193, 193);
+	  --color-pink: rgb(197, 70, 91);
   }
   
   
@@ -43,7 +45,14 @@
 	  text-transform: uppercase;
   }
   
-  /* SOCIAL MEDIA ICONEN */
+  /* SOCIAL MEDIA ICONS */
+
+  header {
+	position: fixed;
+	width: 100%;
+	z-index: 2; /* bron 10 ChatGPT: can I position something forward with css, so that you don't see elements that you don't want to see? https://chatgpt.com/share/66f93a30-6d1c-800f-b37a-80541f509eeb */
+  }
+
   header > div:first-of-type {
 	  background-color: var(--color-black);
 	  display: flex;
@@ -60,14 +69,14 @@
   }
   
   /* NAVIGATION */
- .ofscreenmenu {
+ #menu {	/* Hulp van Alexi, bron 10 ChatGPT: can you make a simple hamburger menu that shifts the content of it from the right to left. It takes up a whole mobile screen, so full height and width. 
+			I now have that the hamburger menu is a img, and changes images if I am clicking it. (changes from burger to cross) https://chatgpt.com/share/66f958d5-0450-800f-8039-4608be54c88d, bron 11 YouTube: https://youtu.be/aNDqzlAKmZc?si=nSyuT3wzvqFc4d3c*/
 	background-color: var(--color-white);
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	max-width: 15em;
 	position: fixed;
 	top: 0;
-	right: -15em;
+	right: -100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -77,42 +86,39 @@
 	transition: 300ms ease;
  } 
 
- .ofscreenmenu.active {
+ #menu.active {
 	right: 0;
+ }
+
+ #menu ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	
+ }
+
+ #menu li a {
+	text-decoration: none;
+	color: var(--color-black);
+	font-size: .9rem;
  }
  
   nav {
 	  display: flex;
 	  padding: 1em;
 	  justify-content: end;
+	  background-color: var(--color-white);
+	  width: 100%;
   }
 
-  .hamburgermenu {
-	height: 1em;
-	width: 3em;
-	margin-left: auto;
-	position: relative;
-	border-radius: .2rem;
+  nav > img:first-of-type {
+	margin-top: -.3rem;
   }
 
-  .hamburgermenu span {
-	height: .5rem;
-	width: 100%;
-	background-color: var(--color-brown);
-	border-radius: 2em;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: .3s ease;
-  }
-
-  .hamburgermenu span:nth-child(1) {
-	top: 25%;
-  }
-
-  .hamburgermenu span:nth-child(3) {
-	top: 75%;
+  #hamburger {
+    width: 3em;
+    height: 3em;
+    z-index: 10;
   }
   
   /* BIG NEWS */
@@ -132,7 +138,7 @@
 	  background-position: 80% center;
 	  background-repeat: no-repeat;
   
-	  padding: 2em 0em 2em 0em;
+	  padding: 10em 0em 2em 0em;
 	  color: var(--color-white);
   }
   
@@ -178,8 +184,7 @@
 	  padding: 0em .5rem .5rem .5rem;
   }
   
-  /* TWO CARDS */
-  
+
   /* EVENTSELECTOR */
   
   
@@ -249,7 +254,7 @@
   .eventsections {
 	  padding: 0;
 	  display: flex;
-	  align-items: center;
+	  align-items: top;
 	  justify-content: space-evenly;
 	  margin: 2em 0em 8em 0em;
   }
@@ -262,15 +267,17 @@
 	  margin-right: .5rem;
   }
   
-  .eventsections > button:first-of-type, .eventsections > button:last-of-type{ /* bron 7 ChatGPT: how do I select the very first and the very last button seperately? https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253 */
+  .eventsections > button:first-of-type, .eventsections > button:last-of-type, .nextback button{ /* bron 7 ChatGPT: how do I select the very first and the very last button seperately? https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253 */
 	  color:  var(--color-gray);
-	  background-color:rgb(197, 193, 193);
+	  background-color:var(--color-button);
 	  border: none;
 	  border-radius: 50%; /* Makes the button circular */
 	  width: 2em; /* Set a width */
 	  height: 2em; /* Set the same height as the width */
-	  display: flex;
-	  align-items: center;
+
+	  
+	  transform: translateY(20em);
+
 	  justify-content: center;
 	  font-size: 1em;
 	  padding: 0;
@@ -308,11 +315,17 @@
 	  border-top-right-radius: 0;
 	  padding: 1em;
 	  margin-top: -1.5em;
-	  background-color: white; 
+	  background-color: var(--color-white); 
+	  display: flex;
 	  flex-direction: column;
   }
   
-  .eventsections div > button:first-of-type {
+  .eventsections div > a, #guardiangirls a {
+	text-decoration: none;
+	text-transform: uppercase;
+  }
+
+  .eventsections div > a:first-of-type, .eventsections div > a:nth-last-of-type(2), #guardiangirls a {
 	  background: none;
 	  border: .1rem solid var(--color-gray);
 	  border-radius: 1em;
@@ -326,12 +339,12 @@
 	  display: flex;
   }
 
-  .eventsections button img[alt="arrowright"] { /*bron 8ChatGPT: how do I select the arrowright img in css? https://chatgpt.com/share/66f6757d-1584-800f-b514-2439e9151a56*/
+  .eventsections a img[alt="arrowright"] { /*bron 8ChatGPT: how do I select the arrowright img in css? https://chatgpt.com/share/66f6757d-1584-800f-b514-2439e9151a56*/
     max-width: 4em;
-	margin-top: 1em;  /* Align items werkt nu niet dus ik heb het even zo opgelost */
+	align-items: center;  /* Align items werkt nu niet dus ik heb het even zo opgelost */
 }
   
-  .eventsections div > button:last-of-type {
+  .eventsections div > a:last-of-type {
 	  background: var(--color-brown);
 	  border: .2rem solid var(--color-brown);
 	  color: var(--color-white);
@@ -342,4 +355,87 @@
 	  border-radius: 1em;
 	  margin: 1em;
 	  padding: 1em;
+	  justify-content: center;
+  }
+
+  #calendar {
+	display: flex;
+	justify-content: center;
+	margin: 0em 2em 4em 2em;
+  }
+
+  #calendar img {
+	width: 3em;
+	height: 3em;
+  }
+
+  #calendar h2 {
+	margin-left: .7rem;
+	font-size: 1.3em;
+	color: var(--color-brown);
+  }
+
+  /* GUARDIAN GIRLS */
+
+  body > h2:first-of-type {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	padding: 2em;
+  }
+
+  #guardiangirls {
+	padding: 2em;
+  }
+
+  #guardiangirls p {
+	font-weight: bold;
+	font-size: .9rem;
+  }
+
+  #guardiangirls a {
+	margin-top: 3em;
+	width: 50%;
+	transform: translateX(-10%);
+  }
+
+  #guardianimg {
+	background-color: var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 1em 6em 1em;
+  }
+
+  h2 > span { /* Hulp van Alexi */
+	color: var(--color-pink)
+  }
+
+  .nextback button {
+	width: 2em;
+	height: 2em;
+  }
+
+  footer div {
+	background-color: var(--color-black);
+	display: flex;
+	padding: 2em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1em;
+  }
+
+  footer > div a:nth-child(odd) {
+	order: 1;
+	flex: 1 1 45%;
+  }
+
+  footer > div a:nth-child(even) {
+	order: 2;
+	flex: 1 1 45%;
+  }
+
+  footer a {
+	color: var(--color-white);
+	text-decoration: none;
+	font-weight: bold;
   }
