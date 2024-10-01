@@ -58,8 +58,8 @@ nextBtn.addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const hamburgerIcon = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
+  const hamburgerIcon = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
 
   // Function to toggle the menu open/close
   function toggleMenu() {
@@ -77,3 +77,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+// Referenties naar de modal en de close button
+var modal = document.getElementById("guardiangirlsvideo");
+var btn = document.getElementById("videoTrigger");
+var span = document.getElementsByClassName("close")[0];
+
+// Wanneer de afbeelding wordt geklikt, wordt de modal weergegeven
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Wanneer de close button wordt geklikt, wordt de modal gesloten
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Wanneer er buiten de modal wordt geklikt, wordt de modal ook gesloten
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const shareButton = document.querySelector("#buenosaires > div:first-of-type > button");
+  const shareImage = document.querySelector("#buenosaires > div:first-of-type > img");
+
+  shareButton.addEventListener("click", function() {
+      // Toggle visibility
+      if (shareImage.style.display === "none" || shareImage.style.display === "") {
+          shareImage.style.display = "block";
+      } else {
+          shareImage.style.display = "none";
+      }
+  });
+});

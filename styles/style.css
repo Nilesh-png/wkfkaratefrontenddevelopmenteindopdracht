@@ -19,6 +19,7 @@
 	  --color-white:#ffffff;
 	  --color-gradientgray: rgba(100, 100, 100, 0.7);
 	  --color-gray: rgb(100, 100, 100);
+	  --color-darkgray: rgb(52, 52, 52);
 	  --color-brown: rgb(165, 42, 42);
 	  --color-button:rgb(197, 193, 193);
 	  --color-pink: rgb(197, 70, 91);
@@ -53,7 +54,7 @@
 	z-index: 2; /* bron 10 ChatGPT: can I position something forward with css, so that you don't see elements that you don't want to see? https://chatgpt.com/share/66f93a30-6d1c-800f-b37a-80541f509eeb */
   }
 
-  header > div:first-of-type {
+  header > div {
 	  background-color: var(--color-black);
 	  display: flex;
 	  justify-content: center;
@@ -67,9 +68,11 @@
 	  border: 0.1rem solid var(--color-black);
 	  margin-right: .5rem;	
   }
+
+
   
   /* NAVIGATION */
- #menu {	/* Hulp van Alexi, bron 10 ChatGPT: can you make a simple hamburger menu that shifts the content of it from the right to left. It takes up a whole mobile screen, so full height and width. 
+ .menu {	/* Hulp van Alexi, bron 10 ChatGPT: can you make a simple hamburger menu that shifts the content of it from the right to left. It takes up a whole mobile screen, so full height and width. 
 			I now have that the hamburger menu is a img, and changes images if I am clicking it. (changes from burger to cross) https://chatgpt.com/share/66f958d5-0450-800f-8039-4608be54c88d, bron 11 YouTube: https://youtu.be/aNDqzlAKmZc?si=nSyuT3wzvqFc4d3c*/
 	background-color: var(--color-white);
 	height: 100%;
@@ -86,23 +89,138 @@
 	transition: 300ms ease;
  } 
 
- #menu.active {
+ .menu.active {
 	right: 0;
+	overflow-y: scroll;
  }
 
- #menu ul {
+ .menu > ul {
 	list-style-type: none;
 	display: flex;
-	flex-direction: column;
-	
+	text-decoration: none;
  }
 
- #menu li a {
-	text-decoration: none;
+   .menu > ul li details[open] summary img { /* Hulp van Mart */
+	transform: rotate(90deg);
+	transition: transform 0.3s ease;
+  }
+
+  footer details[open] summary img { /* Hulp van Mart */
+		transform: rotate(45deg);
+		transition: transform 0.3s ease;
+  }
+
+  footer details:not([open]) summary img {
+	transition: transform 0.3s ease;
+  }
+
+  .menu > ul li details:not([open]) summary img {
+	transition: transform 0.3s ease;
+}
+
+  .menu ul details a {
+	text-align: end;
+	margin-bottom: .5rem;
+	color: var(--color-gray);
+}
+
+ NEWS PHOTOS VIDEOS
+ .menu > ul:first-of-type {
+	margin: .2rem 1em -1.5em 4em;
+ }
+
+ .menu > ul:first-of-type li {
+	margin: 4em .9rem 0 0;
+	font-size: 0.8em;
+ }
+
+ .menu > ul:first-of-type li a {
+	color: var(--color-brown);
+	font-weight: bold;
+	font-stretch: condensed;
+ }
+
+ /* HAMBURGER LIST */
+
+ .menu > ul:last-of-type {
+	flex-direction: column;
+	text-align: end;
+	margin: 2em 0 0 4em;
+ }
+
+ .menu > ul:last-of-type li {
+	margin-bottom: -.4rem;
+ }
+
+ .menu > ul:last-of-type details summary {
+	margin: .5rem 0 .5rem 0;
+	list-style-type: none;
+ }
+
+ .menu > ul:last-of-type li a, .menu > ul:last-of-type summary {
 	color: var(--color-black);
 	font-size: .9rem;
  }
+
+.menu > ul:last-of-type details {
+		display: flex;
+ }
+
+ .menu > ul:last-of-type details a {
+	color: var(--color-gray);
+ }
+	
+
+ /* NEWS ETC + HAMBURGER LIST */
  
+
+ .menu > ul li a, .menu > ul:last-of-type summary {
+	text-decoration: none;
+ }
+
+ .menu > img:last-of-type {
+	width: 2em;
+	height: 2.5em;
+	margin-top: 1rem;
+	transform: translateX(4em);
+ }
+
+ .menu img {
+	width: 2em;
+	height: 2em;
+	transform: translateY(.5rem);
+ }
+
+ input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--color-brown);
+    outline: none; /* Verwijder de blauwe rand bij focus */
+    padding: 10px 5px;
+    font-size: 16px;
+    background: transparent; /* Zorg ervoor dat de achtergrond transparant is */
+}
+
+ #searchcontainer {
+	display: flex;
+	align-items: end;
+	margin: 0 1em 1em 1em;
+	transform: translateX(1em);
+ }
+
+ .menu > div:last-of-type {
+	display: flex;
+	transform: translate(5.2em, -1em);
+	width: 8em;
+	height: 4em;
+ }
+
+ .menu > div:last-of-type img {
+	width: 1em;
+	height: 1em;
+ }
+ 
+/* NAVIGATION 2*/
   nav {
 	  display: flex;
 	  padding: 1em;
@@ -115,7 +233,7 @@
 	margin-top: -.3rem;
   }
 
-  #hamburger {
+  .hamburger {
     width: 3em;
     height: 3em;
     z-index: 10;
@@ -128,18 +246,21 @@
 	  font-size: 3em;
   }
   
-  #bignews section h2, .bignews section p {
+  #bignews section h2, #bignews section p {
 	  margin: 0em .5rem 0em .5rem;
   }
   
-  #bignews {		/* bron 1 ChatGPT prompts: hoe zou ik een afbeelding kunnen toevoegen als achtergrond in het BIG NEWS gedeelte? (html laten zien) en hoe kan ik de afbeelding iets meer naar links verschuiven? https://chatgpt.com/share/66f66e77-4924-800f-a1fe-e7400bd58418*/
+  #bignews, #buenosaires > section:first-of-type {		/* bron 1 ChatGPT prompts: hoe zou ik een afbeelding kunnen toevoegen als achtergrond in het BIG NEWS gedeelte? (html laten zien) en hoe kan ik de afbeelding iets meer naar links verschuiven? https://chatgpt.com/share/66f66e77-4924-800f-a1fe-e7400bd58418*/
 	  background-image: url("../images/news.jpg");
 	  background-size: cover;
 	  background-position: 80% center;
 	  background-repeat: no-repeat;
   
-	  padding: 10em 0em 2em 0em;
 	  color: var(--color-white);
+  }
+
+  #bignews {
+	padding: 10em 0em 2em 0em;
   }
   
   /* NEWS SECTIONS */
@@ -267,7 +388,7 @@
 	  margin-right: .5rem;
   }
   
-  .eventsections > button:first-of-type, .eventsections > button:last-of-type, .nextback button{ /* bron 7 ChatGPT: how do I select the very first and the very last button seperately? https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253 */
+  .eventsections > button:first-of-type, .eventsections > button:last-of-type{ /* bron 7 ChatGPT: how do I select the very first and the very last button seperately? https://chatgpt.com/share/66f673ae-dc08-800f-906a-63b4bbfb4253 */
 	  color:  var(--color-gray);
 	  background-color:var(--color-button);
 	  border: none;
@@ -297,7 +418,7 @@
 	  border-bottom: 1.5em solid var(--color-brown);
   }
   
-  .eventsections > div {
+  .eventsections > div{
 	  justify-content: space-between;
 	  max-width: 70%;
 	  display: none;
@@ -325,7 +446,7 @@
 	text-transform: uppercase;
   }
 
-  .eventsections div > a:first-of-type, .eventsections div > a:nth-last-of-type(2), #guardiangirls a {
+  .eventsections div > a:first-of-type, .eventsections div > a:nth-last-of-type(2), #karatelifevideos > div button:first-of-type, #guardiangirls > a {
 	  background: none;
 	  border: .1rem solid var(--color-gray);
 	  border-radius: 1em;
@@ -344,7 +465,7 @@
 	align-items: center;  /* Align items werkt nu niet dus ik heb het even zo opgelost */
 }
   
-  .eventsections div > a:last-of-type {
+  .eventsections div > a:last-of-type, #buenosaires > section:first-of-type > a {
 	  background: var(--color-brown);
 	  border: .2rem solid var(--color-brown);
 	  color: var(--color-white);
@@ -356,6 +477,8 @@
 	  margin: 1em;
 	  padding: 1em;
 	  justify-content: center;
+	  text-transform: uppercase;
+	  text-decoration: none;
   }
 
   #calendar {
@@ -406,36 +529,228 @@
 	padding: 1em 1em 6em 1em;
   }
 
+  /* #kKARATELIFE VIDEOS */
+
   h2 > span { /* Hulp van Alexi */
 	color: var(--color-pink)
   }
 
-  .nextback button {
-	width: 2em;
-	height: 2em;
+  #karatelifevideos div {
+	display: flex;
+	justify-content: center;
   }
+
+  #karatelifevideos h2 {
+	margin: 2em 0 1em 0;
+	transform: translateX(1em);
+  }
+
+  #videoTrigger {
+	width: 20em;
+	height: 30em;
+	margin-bottom: 2em;
+  }
+
+  #guardiangirlsvideo {
+	display: none; /* Verborgen standaard */
+    position: fixed;
+    z-index: 1; /* Op de voorgrond */
+    left: 0;
+    top: 0;
+    width: 100%; /* Volledige breedte */
+    height: 100%; /* Volledige hoogte */
+    overflow: auto; /* Scrollen indien nodig */
+    background-color: rgb(0,0,0); /* Zwart met een beetje transparantie */
+    background-color: rgba(0,0,0,0.9); /* Zwart met transparantie */
+  }
+
+  #guardiangirlsvideo iframe {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center de video */
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#karatelifevideos > button {
+	background: none;
+	border: none;
+	width: 4em;
+	transform: translate(2em, 4em);
+}
+
+  /* FOOTER */
 
   footer div {
 	background-color: var(--color-black);
 	display: flex;
-	padding: 2em;
+	padding: 1em;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 1em;
+	gap: .5rem;
   }
 
   footer > div a:nth-child(odd) {
 	order: 1;
-	flex: 1 1 45%;
+	flex: 1 1 25%;
   }
 
   footer > div a:nth-child(even) {
 	order: 2;
-	flex: 1 1 45%;
+	flex: 1 1 25%;
   }
 
   footer a {
 	color: var(--color-white);
 	text-decoration: none;
 	font-weight: bold;
+  }
+
+  /* SITEMAP */
+
+  footer > details {
+	background-color: var(--color-darkgray);
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	text-transform: uppercase;
+  }
+
+  footer > details summary {
+	padding: .7rem;
+	list-style-type: none;
+  }
+
+  footer > details summary img {
+	transform: translateY(.5rem);
+  }
+
+  footer > details summary, footer > details h2 {
+	color: var(--color-white);
+	font-weight: bold;
+	font-size: 1.5em;
+  }
+
+  footer > details h2, footer > details a {
+	transition: height 0.3s ease;
+  }
+
+  footer > details h2 {
+	padding: 1em 1em .5rem 1em;
+  }
+
+  footer > details a {
+	color: var(--color-gray);
+	padding: -.5rem;
+	font-weight: lighter;
+  }
+
+
+  /* PAGE 2 */
+
+
+  /* #buenosaires, #buenosaires footer {
+	transform: translateY();
+  } */
+
+  #buenosaires section:first-of-type  {
+	padding: 10em 0 3em 0;
+	background-image: url("../images/slider1.png");
+	display: grid;
+	grid-template-rows: 10em max-content;
+	grid-template-columns: 1fr max-content;
+	
+  }
+
+  #buenosaires section:first-of-type h2, #buenosaires section:first-of-type p {
+	transform: translateX(1em);
+  }
+
+  #buenosaires section:first-of-type a {
+	grid-column-start:2;
+	grid-row-start:1;
+	align-self:start;
+	justify-self:end;
+	margin: .5rem;
+	aspect-ratio: 1/1;
+  }
+
+  #buenosaires > section:nth-of-type(2) {
+	padding: 3em 2em 3em 2em;
+  }
+
+  #buenosaires > section:nth-of-type(2) > img:first-of-type {
+	width: 5em;
+  }
+
+  #buenosaires > section:nth-of-type(2) > h2 {
+	text-transform: none;
+	font-size: 1.3em;
+  }
+
+  #buenosaires > section:nth-of-type(2) span {
+	text-transform: uppercase;
+  }
+
+  #buenosaires > section:nth-of-type(2) > img:last-of-type {
+	width: 3em;
+  }
+
+  #buenosaires > section:nth-of-type(2) > p {
+	margin: 2em 0 2em 0;
+	font-size: .9rem;
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:first-of-type > button {
+	width: 3em;
+	border: none;
+	background: none;
+	transform: translateY(-.7rem);
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:first-of-type > img {
+	width: 12em;
+	visibility: hidden;
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:last-of-type {
+	border: .3rem solid var(--color-black);
+	border-radius: 1em;
+	display: flex;
+	flex-wrap: wrap;
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:last-of-type > a {
+	display: flex;
+	text-decoration: none;
+	color: var(--color-black);
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:last-of-type > a > p {
+	transform: translateY(3em);
+  }
+
+  #buenosaires > section:nth-of-type(2) > div:last-of-type > a > img {
+	width: 4em;
+	margin: 1em .5rem 1em .5rem;
+  }
+
+  #buenosaires img {
+	margin-bottom: 2em;
   }
