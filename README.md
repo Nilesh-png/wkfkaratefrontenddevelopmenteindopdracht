@@ -104,6 +104,13 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/ssweek2.png" width="375px" alt="screenshot over week 2">
+  
+  WAT GING GOED?
+- een goede html structuur opstellen, om daarna alleen op css te hoeven focussen.
+
+  WAT GING MINDER GOED?
+- met vragen komen, aangezien ik pas net een html structuur heb opgebouwd, en meestal loop je pas tegen dingen aan in css en javascript.
 
 
   ### Agenda voor meeting
@@ -115,11 +122,16 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  VRAGEN
+  - Wanneer is iets een button en wanneer niet?
+  - hoe is het nieuws stukje opgebouwd in html?
+  - hoe deel ik mijn scrollbare menu op?
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - sommige buttons moesten a href zijn
+  - sommige buttons moesten a href zijn, omdat het leidt naar een ander pagina. Buttons zijn functies binnenin de pagina
   - het nieuws stukje is een section in zijn geheel, in het scroll gedeelte zit er een section en alle kleine blokjes zijn ook sections
   - voor een stukje van mijn website werden eerder sections aangeraden dan de details tag
 
@@ -136,7 +148,8 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+<img src="readme-images/ssweek3.png" width="375px" alt="screenshot over week 3">
+het was lastig om te bepalen hoe de sections waren opgedeeld, maar na wat hulp is het goedgekomen
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -163,8 +176,10 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
 - ...
 
 - hamburgermenu en dark mode is surface plane
+- ChatGPT
 - niet alles hoeft te werken, maar wel ong drie sections om te laten zien dat je het kan
-- 
+- ik zou screenshots maken
+- ik heb het zelf gefixt
 
 </details>
 
@@ -177,8 +192,28 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
+
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  WAT NIET WAS AANGEVINKT IN DE CHECKLIST IN DE VORIGE TEST
+  - De screenreader beschrijft de pagina niet goed genoeg, waardoor de gebruiker niet heel goed weet waar in de pagina die zich bevindt en/of welke informatie erbij wordt verteld.
+  - Geen alt text voor de foto's en video's. Je hoort alleen "foto, foto" of "video, video"
+  - de video's zijn niet afspeelbaar. Je ziet alleen een zwart scherm met een kruisje om de "video" weg te klikken.
+  - De website heeft veel div elementen, waardoor je tags zoals <!--<button> en <h1>--> helemaal niet ziet. Daardoor ontbreken er zoveel tags
+  - Er zijn onzichtbare elementen die gefocust kunnen worden met de tab toets.
+  - De lay-out is redelijk simpel, maar omdat er zoveel elementen staan, is het toch nog een kleine chaos.
+  - Je kan horizontaal scrollen in deze site, maar alleen voor specifieke content dat op een rijtje staat.
+  
+WAT IS DAARVAN VERBETERD?
+- De screenreader beschrijft de pagina nu goed. Je weet waat je bent
+- Alt text en aria labels is aanwezig
+- Video is afspeelbaar
+- Veel minder div'jes
+
+WAT NIET?
+- Horizontaal scrollen is er nog steeds, maar ik weet niet hoe ik het kan oplossen
+- Soms bij de screenreader pakt het elementen die niet te zien zijn
 
 </details>
 
@@ -193,6 +228,11 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/ssweek4.png" width="375px" alt="screenshot over week 4">
+  wat moeizaam ging was de javascript, maar daar had chatgpt heel erg mee geholpen en met wat tips van studenten, studentassistenten en de docent.
+  
+  <img src="readme-images/ssweek4v2.png" width="375px" alt="screenshot over week 4">
+  Wat goed ging was het maken van de footer. Ik had het veel moeilijker verwacht.
 
 
   ### Agenda voor meeting
@@ -204,6 +244,9 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+  - Mag je classes selecteren in javascript?
+  - Hoort de sitemap gedeelte ook bij de footer?
+  - hoe krijg ik de buttons met een img erin mooi in het midden?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -223,19 +266,32 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="../wkfkaratefrontenddevelopmenteindopdracht/readme-images/sshomepage.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
+  - gebruik maken van een details tag
+  - geleerd dat je met bepaalde code ook < en > kan maken
+  - hoe je een hamburger menu moet maken
+  - hoe je een scrollbare menu met een driehoek als indicator kan maken
+  - hoe je iets horizontaal kan laten scrollen
+  - hoe je een video als pop up kan weergeven
+  - hoe je images kan animeren
+  - hoe je een invulveld maakt
+  - de basis van het gebruiken van een screenreader
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="..//wkfkaratefrontenddevelopmenteindopdracht/readme-images/ssgeleerd.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  - de scrollbare menu: de buttons ook laten koppelen met sections
+  - een slider maken
+  - background images donkerder maken, zonder al het inhoud donkerder te maken
+
+  <img src="../wkfkaratefrontenddevelopmenteindopdracht/readme-images/ssslecht.png" width="375px" alt="bummer">
 </details>
 
 
@@ -263,5 +319,7 @@ WAT WEL WAS AANGEVINKT IN DE CHECKLIST
   10.[bron 10](https://chatgpt.com/share/66f958d5-0450-800f-8039-4608be54c88d)
   11.[bron 11](https://youtu.be/aNDqzlAKmZc?si=nSyuT3wzvqFc4d3c)
   12.[bron 12](https://chatgpt.com/share/66fab717-3bac-800f-8c2a-8379d213f945)
+  13.[bron 13](https://chatgpt.com/share/66fbfa6f-afb8-800f-9332-0db16a4eedb2)
+  14.[bron 14](https://chatgpt.com/share/66fbfb55-06d4-800f-ac8c-faf19783cfbf)
 
 </details>
